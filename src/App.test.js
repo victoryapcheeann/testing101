@@ -19,6 +19,21 @@ test('renders without crashing', () => {
 });
 
 /*
+Step 0) TDD 
+Write tests before writing code 
+"red-green" testing 
+-Test fails before code is written 
+-Tests fail before code is written 
+
+Why TDD? 
+Usually test code manually 
+-With TDD, re-run tests "for free" after changes
+Better Code 
+-Better organised (Plan before you code)
+-More test-able (No re-writing code in order to test)
+-Fewer code (Caught sooner, regresstion)
+-Greater code coverage (Testing is part of coding)
+
 Step 1) npm test
 Will not retest the files u committed unless u made changes to it
 
