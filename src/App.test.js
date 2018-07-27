@@ -48,5 +48,42 @@ npm install --save-dev jest enzyme jest-enzyme enzyme-adapter-react-16
 
 Step 6) Shallow Rendering (Enzyme Doc)
 
-Step 7) Types of test - Unit/Integration test
+Step 7) Types of test - Unit/Integration test/Acceptance End to end test
+
+Step 8) Primary global
+Test behavior, not implementation
+-Do not want to rewrite tests after refactor
+-Keep in mind while writing test
+
+Feature to tests
+-App keeps counter of button click count
+-Click count is stored in component state 
+
+Good test
+-Set initial state 
+-Simulate clicking a button that increments counter 
+-Check to see if counter state was incremented
+
+Bad test
+-Set initial state 
+-Simulate clicking a button that increments counter 
+-Check to see if particular function was called
+
+Why bad?
+Testing implementation (function name)
+Not behavior (state update)
+
+Isn't state an implementation?
+Sometimes skip unit, focus on integration
+-Art not science
+-Find your own style
+
+Step 9) Snapshot testing?
+Freeze a component
+Test fails if any changes
+-No TDD
+-Brittle (any change to component will break)
+-Too easy to ignore failures and update
+-No test intent
+-If used, its alongside traditional test
 */
