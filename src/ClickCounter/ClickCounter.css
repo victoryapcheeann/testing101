@@ -1,0 +1,8 @@
+.error {
+  font-size: 150%;
+  color: red;
+}
+
+.hidden {
+  display: none;
+}

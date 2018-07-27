@@ -10,7 +10,7 @@ Enzyme.configure({ adapter: new EnzymeAdapter() });
   Factory Function to create a shallowWrapper for the App component.
   @function setup
   @parem {object} props - Component props specific to this setup
-  @parem {any} states - Initial state for the setup
+  @parem {object} states - Initial state for the setup
   @returns {shallowWrapper}
 */
 const setup = (props={}, state=null) => {
