@@ -13,8 +13,13 @@ class ClickCounter extends Component {
     return (
       <div data-test="component-app">
         {/*data-test: let people this attribute is for testing*/}
-        <h1 data-test="counter-display">The counter is currently</h1>
-        <button data-test="increment-button">Increment button</button>
+        <h1 data-test="counter-display">The counter is currently {this.state.counter}</h1>
+        <button 
+          data-test="increment-button"
+          onClick={() => this.setState({counter: this.state.counter + 1})}
+          >
+          Increment button
+        </button>
       </div>
     );
   }
