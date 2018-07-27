@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Enzyme from 'enzyme';
+import Enzyme, { shallow } from 'enzyme';
 import EnzymeAdapter from 'enzyme-adapter-react-16';
 import App from './App';
 
@@ -8,6 +8,14 @@ Enzyme.configure({ adapter: new EnzymeAdapter() });
 
 test('renders without crashing', () => { 
   //git use 'it' or 'test', but test is in the jest official documentation
+  const wrapper = shallow(<App />);
+  console.log(wrapper.debug());
+  //debug function is useful for debugging
+  /*
+  jest expect api
+  expect(wrapper).toBeTruthy();
+  expect(wrapper).toBeFalsy();
+  */
 });
 
 /*
@@ -37,4 +45,8 @@ Step 5) Setting up Enzyme
 npm install ajv
 npm install --save-dev jest enzyme jest-enzyme enzyme-adapter-react-16
 ->Enzyme adapter, what type of code to expect
+
+Step 6) Shallow Rendering (Enzyme Doc)
+
+Step 7) Types of test - Unit/Integration test
 */
